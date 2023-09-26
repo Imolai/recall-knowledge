@@ -30,7 +30,7 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
    ```
 
 5. **Detaching from a session:**
-   To detach from the current session, use the `Ctrl-a d` keyboard shortcut.
+   To detach from the current session, use the **`Ctrl-a d`** keyboard shortcut.
 
 6. **Closing a screen session:**
    After detaching from a session, you can close the session with the following command:
