@@ -6,6 +6,12 @@ When you start a `screen` session, the processes running within that session are
 If an SSH session is terminated for any reason, any `screen` sessions running within that SSH session will automatically detach. The processes running inside the `screen` session will continue to run in the background.
 You can later reattach to the `screen` session and resume your work where you left off.
 
+After reconnecting via SSH, you can reattach to the detached `screen` session using:
+
+```sh
+screen -r [session_id_or_name]
+```
+
 ## Table of contents
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
@@ -30,12 +36,6 @@ You can later reattach to the `screen` session and resume your work where you le
   + [Screen session is garbled or disturbed](#screen-session-is-garbled-or-disturbed)
 
 <!-- TOC end -->
-
-After reconnecting via SSH, you can reattach to the detached `screen` session using:
-
-```sh
-screen -r [session_id_or_name]
-```
 
 Here’s a brief example of how you might use `screen` in this scenario:
 
