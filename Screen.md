@@ -12,8 +12,6 @@ After reconnecting via SSH, you can reattach to the detached `screen` session us
 screen -r [session_id_or_name]
 ```
 
-This feature makes `screen` especially useful for long-running tasks or processes, as it allows them to continue running even if the SSH connection is lost, and you can reattach to the session later to check the progress or results.
-
 Here’s a brief example of how you might use `screen` in this scenario:
 
 1. **Start a Screen Session:**
