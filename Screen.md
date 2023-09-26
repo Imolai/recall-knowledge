@@ -39,27 +39,28 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
    ```
 
 7. **Managing Virtual Windows:**
-   - Create a new window: `Ctrl-a c`
-   - Switch between windows: `Ctrl-a n` for the *N*ext window, and `Ctrl-a p` for the *P*revious window
-   - Switch by window number: `Ctrl-a [number]`
+   - Create a new window: **`Ctrl-a c`**
+   - Switch between windows: **`Ctrl-a n`** for the *N*ext window, and **`Ctrl-a p`** for the *P*revious window
+   - Switch by window number: **`Ctrl-a [number]`**
    - Naming a window: `Ctrl-a A`
 
 8. **Scroll mode / Scrolling:**
-   Activate scroll mode with `Ctrl-a [` and use the arrow keys to scroll. To exit scroll mode, press `Enter` or `Esc`.
+   Activate scroll mode with **`Ctrl-a [`** and use the arrow keys to scroll. To exit scroll mode, press `Enter` or `Esc`.
 
 9. **Displaying help:**
-   If you need more commands, press `Ctrl-a ?` to access the help.
+   If you need more commands, press **`Ctrl-a ?`** to access the help.
 
 10. **Exiting a screen session:**
    To exit and close the session, type `exit` in the prompt.
 
-11. **Exiting from all screen sessions at once:**
-   If you want to terminate all windows and close the `screen` session with a single command, you can do so from within the `screen` session using the following combination:
+11. **Killing all windows and terminating screen:**
+   To kill all windows and terminate screen, press **`Ctrl-a \`**.
+   Or
       1. Press **`Ctrl-a`** to enter command mode.
       2. Then type **`:quit`** and press `Enter`.
    This will quit the `screen` session by closing all windows at once. Please note that this will immediately terminate all processes running in each window, so make sure to save any unsaved work before using this command.
 
-12. **Configuration file:**
+13. **Configuration file:**
    The configuration file for `screen` is **`~/.screenrc`**. Here, you can customize the settings for `screen`.
    Example:
    ```text
