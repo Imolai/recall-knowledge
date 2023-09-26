@@ -51,8 +51,8 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
 
 10. **Exiting from all screen sessions at once:**
    If you want to terminate all windows and close the `screen` session with a single command, you can do so from within the `screen` session using the following combination:
-   1. Press `Ctrl-a` to enter command mode.
-   2. Then type `:quit` and press `Enter`.
+      1. Press `Ctrl-a` to enter command mode.
+      2. Then type `:quit` and press `Enter`.
    This will quit the `screen` session by closing all windows at once. Please note that this will immediately terminate all processes running in each window, so make sure to save any unsaved work before using this command.
 
 11. **Configuration file:**
