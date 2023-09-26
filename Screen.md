@@ -181,7 +181,7 @@ There is a screen on:
 Given that the screen session is still marked as "Attached", you won’t be able to directly reattach to it. However, you can forcefully reattach the session using the following command:
 
 ```sh
-screen -d -r 40383.pts-36.host001
+$ screen -d -r 40383.pts-36.host001
 ```
 
 In this command:
