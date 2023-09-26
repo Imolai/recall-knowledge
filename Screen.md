@@ -1,6 +1,41 @@
 # Screen summary
 
-The `screen` is a terminal multiplexer that allows you to create multiple virtual terminals within a single physical terminal. Here are some basic usage modes:
+The `screen` is a terminal multiplexer that allows you to create multiple virtual terminals within a single physical terminal.
+`screen` is a very useful tool for managing long-running processes and tasks in an SSH session, especially when there's a risk of the session being terminated by network issues, server policies, or other disruptions.
+When you start a `screen` session, the processes running within that session are not tied to the SSH session.
+If an SSH session is terminated for any reason, any `screen` sessions running within that SSH session will automatically detach. The processes running inside the `screen` session will continue to run in the background.
+You can later reattach to the `screen` session and resume your work where you left off.
+
+After reconnecting via SSH, you can reattach to the detached `screen` session using:
+
+```sh
+screen -r [session_id_or_name]
+```
+
+This feature makes `screen` especially useful for long-running tasks or processes, as it allows them to continue running even if the SSH connection is lost, and you can reattach to the session later to check the progress or results.
+
+Here’s a brief example of how you might use `screen` in this scenario:
+
+1. **Start a Screen Session:**
+   ```sh
+   screen -S mysession
+   ```
+
+2. **Run Your Long-Running Process:**
+   Start your task or process within the `screen` session.
+
+3. **Detach from Screen:**
+   If you need to, you can detach from the `screen` session by pressing `Ctrl-a d`. The processes running within the `screen` session will continue even if you are detached.
+
+4. **Reattach to Screen:**
+   If your SSH session is terminated, you can SSH back into the server and reattach to the `screen` session with:
+   ```sh
+   screen -r mysession
+   ```
+
+This way, `screen` can indeed help prevent data loss due to terminated SSH sessions by allowing processes to run uninterrupted and preserving your command-line environment between connections.
+
+Here are some basic usage modes:
 
 1. **Starting a new screen session:**
    ```sh
