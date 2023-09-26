@@ -6,7 +6,7 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
    ```sh
    screen
    ```
-   or you can name the session:
+   or you can name (***S**ubstitue*) the session (it has already a name `[pid.tty.host]`):
    ```sh
    screen -S session_name
    ```
@@ -20,9 +20,9 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
    screen -list
    ```
 
-3. **Attaching to an existing session:**
+3. **Attaching (*R*esume) to an existing session:**
    ```sh
-   screen -r session_name
+   screen -r [pid.tty.host]/[session_name]
    ```
    or simply (if there is only one)
    ```sh
@@ -33,14 +33,14 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
    To detach from the current session, use the **`Ctrl-a d`** keyboard shortcut.
 
 6. **Closing a screen session:**
-   After detaching from a session, you can close the session with the following command:
+   After detaching from a session, you can close the session with the following command (*e**X**ecute*):
    ```sh
    screen -X -S [session_id] quit
    ```
 
 7. **Managing Virtual Windows:**
    - Create a new window: `Ctrl-a c`
-   - Switch between windows: `Ctrl-a n` for the next window, and `Ctrl-a p` for the previous window
+   - Switch between windows: `Ctrl-a n` for the *N*ext window, and `Ctrl-a p` for the *P*revious window
    - Switch by window number: `Ctrl-a [number]`
    - Naming a window: `Ctrl-a A`
 
@@ -55,12 +55,12 @@ The `screen` is a terminal multiplexer that allows you to create multiple virtua
 
 11. **Exiting from all screen sessions at once:**
    If you want to terminate all windows and close the `screen` session with a single command, you can do so from within the `screen` session using the following combination:
-      1. Press `Ctrl-a` to enter command mode.
-      2. Then type `:quit` and press `Enter`.
+      1. Press **`Ctrl-a`** to enter command mode.
+      2. Then type **`:quit`** and press `Enter`.
    This will quit the `screen` session by closing all windows at once. Please note that this will immediately terminate all processes running in each window, so make sure to save any unsaved work before using this command.
 
 12. **Configuration file:**
-   The configuration file for `screen` is `~/.screenrc`. Here, you can customize the settings for `screen`.
+   The configuration file for `screen` is **`~/.screenrc`**. Here, you can customize the settings for `screen`.
    Example:
    ```text
    startup_message off
